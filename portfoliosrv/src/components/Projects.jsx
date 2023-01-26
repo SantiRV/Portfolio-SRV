@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button, Col, Row } from 'react-bootstrap';
+import { Card, Button, Row, Container, Col } from 'react-bootstrap'; 
 import hm from '../assets/projects/hm.png';
 import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg';
 import '../styles/projects.css'
@@ -25,14 +25,15 @@ const projects = [
 
 function Projects() {
   return (
+    <Container>
     <Row >
-      <Col xs={6} sm={4} md={3}>
-    <div className="projects-container">
+      
+    
       {projects.map((project, index) => { 
         return (
           
-          
-          <Card key={index} className="project-card">
+          <Col xs={12} md={6} lg={4} key={index} className="project-col">
+          <Card className="project-card">
             <Card.Img variant="top" src={project.image} className="project-image" />
             <Card.Body>
             <div className="project-description">
@@ -46,12 +47,13 @@ function Projects() {
             </div>
             </Card.Body>
           </Card>
-          
+          </Col>
         )
       })}
-    </div>
-    </Col>
+    
+    
     </Row>
+    </Container>
   );
 }
 
