@@ -1,0 +1,11 @@
+.project-card {
+    display: flex;
+    align-items: center;
+}
+
+.project-image {
+    max-width: 400px;
+}
+.project-description {
+    margin-left: 1em;
+}

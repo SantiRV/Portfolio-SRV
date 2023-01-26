@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 
 import html from '../assets/icons/html.png';
 import css3 from '../assets/icons/css3.png';
@@ -22,6 +22,8 @@ import vsc from '../assets/icons/vsc.png';
 
 function Skills() {
   return (
+    <Card className="skills-container">
+      <Card.Body>
     <Container>
       <h3 align="left">Languages and Tools:</h3>
       <Row>
@@ -112,6 +114,8 @@ function Skills() {
         </Col>
       </Row>
     </Container>
+    </Card.Body>
+    </Card>
   );
 }
 
