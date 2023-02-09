@@ -18,7 +18,7 @@ import less from '../assets/icons/less.png';
 import sass from '../assets/icons/sass.png';
 import tailwindcss from '../assets/icons/tailwindcss.png';
 import vsc from '../assets/icons/vsc.png';
-
+import '../styles/skills.css'
 
 function Skills() {
   return (

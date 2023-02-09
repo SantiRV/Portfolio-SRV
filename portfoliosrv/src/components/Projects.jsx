@@ -11,7 +11,7 @@ const projects = [
     image: hm,
     video: "",
     link: "https://henry-instruments-one.vercel.app/",
-    code: ""
+    code: "https://github.com/SantiRV/henry_instruments"
   },
   {
     name: "Pokemon-App",
@@ -19,7 +19,7 @@ const projects = [
     image: pokeproyecto3,
     video: "https://www.youtube.com/watch?v=FJBWs9c1RDg&feature=share",
     link: "",
-    code: ""
+    code: "https://github.com/SantiRV/PI-Pokemon"
   }
 ];
 
