@@ -1,8 +1,10 @@
 import React from 'react';
 import { Card, Button, Row, Container, Col } from 'react-bootstrap'; 
 import hm from '../assets/projects/hm.png';
-import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg'; 
-import { Contador, TaTeTi, Nut } from '../assets/projects';
+import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg';
+import  Contador from '../assets/projects/Contador.png'; 
+import TaTeTi from '../assets/projects/TaTeTi.png'; 
+import Nut from '../assets/projects/Nut.png';  
 import '../styles/projects.css'
 
 const projects = [
