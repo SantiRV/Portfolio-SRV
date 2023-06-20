@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, Button, Row, Container, Col } from 'react-bootstrap'; 
 import hm from '../assets/projects/hm.png';
-import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg';
+import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg'; 
+import { Contador, TaTeTi, Nut } from '../assets/projects';
 import '../styles/projects.css'
 
 const projects = [
@@ -11,7 +12,7 @@ const projects = [
     image: hm,
     video: "",
     link: "https://henry-instruments-one.vercel.app/",
-    code: "https://github.com/SantiRV/henry_instruments"
+    code: "https://github.com/SantiRV/henry_instruments",
   },
   {
     name: "Pokemon-App",
@@ -19,7 +20,31 @@ const projects = [
     image: pokeproyecto3,
     video: "https://www.youtube.com/watch?v=FJBWs9c1RDg&feature=share",
     link: "",
-    code: "https://github.com/SantiRV/PI-Pokemon"
+    code: "https://github.com/SantiRV/PI-Pokemon",
+  },
+  {
+    name: "Ta-Te-Ti",
+    description:"Una simple web App donde con JavaScript realicé un simple juego muy divertido",
+    image: TaTeTi,
+    video: "",
+    link: "https://ta-te-ti-react-java-script-53ti.vercel.app/",
+    code: "https://github.com/SantiRV/TaTeTi-React-JavaScript.git",
+  },
+  {
+    name: "Contador",
+    description:"Un simple contador realizado con JavaScript",
+    image: Contador,
+    video: "",
+    link: "https://contador-js-gamma.vercel.app/",
+    code: "https://github.com/SantiRV/Contador-js.git",
+  },
+  {
+    name: "Nut HTML & CSS",
+    description:"Una Web que realice para un proyrcto de mi hermano con HTML y CSS (Es solo una maqueta del proyecto)",
+    image: Nut,
+    video: "",
+    link: "https://proyrcto-fsd-html-css.vercel.app/",
+    code: "https://github.com/SantiRV/ProyrctoFSD-HTML-CSS.git",
   }
 ];
 
