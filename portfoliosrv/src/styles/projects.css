@@ -1,4 +1,4 @@
-.project-card {
+/* .project-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,5 +14,10 @@
 }
 .project-description {
     margin-left: 1em;
-}
+} */
 
+.project-card .project-image {
+    height: 200px; /* Ajusta la altura según tus preferencias */
+    object-fit: cover;
+  }
+  
