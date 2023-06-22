@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button, Row, Container, Col, Accordion } from 'react-bootstrap'; 
+import { Card, Button, Row, Container, Col } from 'react-bootstrap'; 
 import Henrymusic from '../assets/projects/Henrymusic.png';
 import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg';
 import  Contador from '../assets/projects/Contador.png'; 
@@ -60,26 +60,20 @@ function Projects() {
         return (
           
           <Col xs={12} md={6} lg={4} key={index} className="project-col">
-           <Accordion defaultActiveKey="0">
-    <Card className="project-card">
-      <Card.Img variant="top" src={project.image} className="project-image" />
-      <Accordion.Toggle as={Card.Header} eventKey="0">
-        <Card.Body>
-          <Card.Title>{project.name}</Card.Title>
-          <Card.Text>{project.description}</Card.Text>
-        </Card.Body>
-      </Accordion.Toggle>
-      <Accordion.Collapse eventKey="0">
-        <Card.Body>
-          <div className="card-buttons-container d-flex">
-            <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2">code</Button>
-            <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2">View Project</Button>
-            <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2">Video</Button>
-          </div>
-        </Card.Body>
-      </Accordion.Collapse>
-    </Card>
-  </Accordion>
+          <Card className="project-card">
+            <Card.Img variant="top" src={project.image} className="project-image" />
+            <Card.Body>
+            <div className="project-description">
+              <Card.Title>{project.name}</Card.Title>
+              <Card.Text>{project.description}</Card.Text>
+            </div>
+            <div className="card-buttons-container d-flex">
+                <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2" >code</Button>
+                <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2" >View Project</Button>
+                <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2" >Video</Button>
+            </div>
+            </Card.Body>
+          </Card>
           </Col>
         )
       })}
@@ -92,15 +86,3 @@ function Projects() {
 
 export default Projects;
 
-/* <Card.Img variant="top" src={project.image} className="project-image" />
-            <Card.Body>
-            <div className="project-description">
-              <Card.Title>{project.name}</Card.Title>
-              <Card.Text>{project.description}</Card.Text>
-            </div>
-            <div className="card-buttons-container d-flex">
-                <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2" >code</Button>
-                <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2" >View Project</Button>
-                <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2" >Video</Button>
-            </div>
-            </Card.Body> */
