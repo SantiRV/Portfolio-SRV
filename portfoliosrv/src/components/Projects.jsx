@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, Row, Container, Col } from 'react-bootstrap'; 
-import Hm from '../assets/projects/Hm.png';
+import Henrymusic from '../assets/projects/Henrymusic.png';
 import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg';
 import  Contador from '../assets/projects/Contador.png'; 
 import TaTeTi from '../assets/projects/TaTeTi.png';  
@@ -11,7 +11,7 @@ const projects = [
   {
     name: "Henry Instruments",
     description: "En este proyecto realicé un e-commerce en conjunto con 7 compañeros. Está basado en la venta de instrumentos y artículos musicales. En cuanto a mi ról dentro del proyecto, empecé trabajando en el back, realizando modelo y rutas de store así también como en la implementación y rutas de mercadopago. En el front trabajé tanto en el componente del carrito y sus estilos como en el formulario de envío y la implementación de la pasarela de pagos.",
-    image: Hm,
+    image: Henrymusic,
     video: "",
     link: "https://henry-instruments-one.vercel.app/",
     code: "https://github.com/SantiRV/henry_instruments",
