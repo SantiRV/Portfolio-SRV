@@ -60,24 +60,26 @@ function Projects() {
         return (
           
           <Col xs={12} md={6} lg={4} key={index} className="project-col">
-          <Card className="project-card">
-          <Accordion.Toggle as={Card.Header} eventKey={index.toString()}>
-            <Card.Img variant="top" src={project.image} className="project-image" />
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey={index.toString()}>
-            <Card.Body>
-              <div className="project-description">
-                <Card.Title>{project.name}</Card.Title>
-                <Card.Text>{project.description}</Card.Text>
-              </div>
-              <div className="card-buttons-container d-flex">
-                <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2">code</Button>
-                <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2">View Project</Button>
-                <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2">Video</Button>
-              </div>
-            </Card.Body>
-          </Accordion.Collapse>
-          </Card>
+           <Accordion defaultActiveKey="0">
+    <Card className="project-card">
+      <Card.Img variant="top" src={project.image} className="project-image" />
+      <Accordion.Toggle as={Card.Header} eventKey="0">
+        <Card.Body>
+          <Card.Title>{project.name}</Card.Title>
+          <Card.Text>{project.description}</Card.Text>
+        </Card.Body>
+      </Accordion.Toggle>
+      <Accordion.Collapse eventKey="0">
+        <Card.Body>
+          <div className="card-buttons-container d-flex">
+            <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2">code</Button>
+            <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2">View Project</Button>
+            <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2">Video</Button>
+          </div>
+        </Card.Body>
+      </Accordion.Collapse>
+    </Card>
+  </Accordion>
           </Col>
         )
       })}
