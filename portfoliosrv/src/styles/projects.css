@@ -5,7 +5,13 @@
     width: 22rem;
     height: 35rem;
     margin: 10px;
+    transition: transform 0.3s;
 }
+
+.project-card.hovered {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 
 .project-image {
     object-fit: cover;

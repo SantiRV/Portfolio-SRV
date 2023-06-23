@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Button, Row, Container, Col } from 'react-bootstrap'; 
+import React, {useState} from 'react';
+import { Card, Button, Row, Container, Col, Modal } from 'react-bootstrap'; 
 import Henrymusic from '../assets/projects/Henrymusic.png';
 import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg';
 import  Contador from '../assets/projects/Contador.png'; 
@@ -51,38 +51,123 @@ const projects = [
 ];
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  const handleModalClose = () => {
+    setSelectedProject(null);
+  };
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  function handleMouseEnter(project) {
+    setHoveredProject(project);
+  };
+
+  function handleMouseLeave() {
+    setHoveredProject(null);
+  };
+
   return (
     <Container>
-    <Row >
-      
-    
-      {projects.map((project, index) => { 
-        return (
-          
+      <Row>
+        {projects.map((project, index) => ( 
           <Col xs={12} md={6} lg={4} key={index} className="project-col">
-          <Card className="project-card">
-            <Card.Img variant="top" src={project.image} className="project-image" />
-            <Card.Body>
-            <div className="project-description">
-              <Card.Title>{project.name}</Card.Title>
-              <Card.Text>{project.description}</Card.Text>
-            </div>
-            <div className="card-buttons-container d-flex">
-                <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2" >code</Button>
-                <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2" >View Project</Button>
-                <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2" >Video</Button>
-            </div>
-            </Card.Body>
-          </Card>
+            <Card 
+            className ={`project-card ${hoveredProject === project ? 'hovered' : ''}`}
+            onMouseEnter={() => handleMouseEnter(project)}
+            onMouseLeave={handleMouseLeave} >
+              <Card.Img
+                variant="top"
+                src={project.image}
+                className="project-image"
+                onClick={() => openModal(project)}
+              />
+              <Card.Body>
+                <div className="project-description">
+                  <Card.Title>{project.name}</Card.Title>
+                  
+                </div>
+                {/* <div className="card-buttons-container d-flex">
+                  <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2">
+                    Code
+                  </Button>
+                  <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2">
+                    View Project
+                  </Button>
+                  <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2">
+                    Video
+                  </Button>
+                </div> */}
+              </Card.Body>
+            </Card>
           </Col>
-        )
-      })}
-    
-    
-    </Row>
+        ))}
+      </Row>
+
+      {selectedProject && (
+        <Modal show={true} onHide={handleModalClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>{selectedProject.name}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>{selectedProject.description}</p>
+            
+          </Modal.Body>
+          <Modal.Footer>
+            <Button href={selectedProject.code} target="_blank" variant="primary">
+              Code
+            </Button>
+            <Button href={selectedProject.link} target="_blank" variant="primary">
+              View Project
+            </Button>
+            <Button href={selectedProject.video} target="_blank" variant="primary">
+              Video
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
     </Container>
   );
 }
 
 export default Projects;
+
+// function Projects() {
+//   return (
+//     <Container>
+//     <Row >
+      
+    
+//       {projects.map((project, index) => { 
+//         return (
+          
+//           <Col xs={12} md={6} lg={4} key={index} className="project-col">
+//           <Card className="project-card">
+//             <Card.Img variant="top" src={project.image} className="project-image" />
+//             <Card.Body>
+//             <div className="project-description">
+//               <Card.Title>{project.name}</Card.Title>
+//               <Card.Text>{project.description}</Card.Text>
+//             </div>
+//             <div className="card-buttons-container d-flex">
+//                 <Button href={project.code} target="_blank" variant="primary" className="mx-auto my-2" >code</Button>
+//                 <Button href={project.link} target="_blank" variant="primary" className="mx-auto my-2" >View Project</Button>
+//                 <Button href={project.video} target="_blank" variant="primary" className="mx-auto my-2" >Video</Button>
+//             </div>
+//             </Card.Body>
+//           </Card>
+//           </Col>
+//         )
+//       })}
+    
+    
+//     </Row>
+//     </Container>
+//   );
+// }
+
+// export default Projects;
 
