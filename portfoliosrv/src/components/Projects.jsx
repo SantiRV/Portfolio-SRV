@@ -4,7 +4,9 @@ import Henrymusic from '../assets/projects/Henrymusic.png';
 import pokeproyecto3 from '../assets/projects/pokeproyecto3.jpg';
 import  Contador from '../assets/projects/Contador.png'; 
 import TaTeTi from '../assets/projects/TaTeTi.png';  
-import Nut from '../assets/projects/Nut.png';  
+import Nut from '../assets/projects/Nut.png'; 
+import Argitalia from '../assets/projects/ArgItalia.png';
+import RainTonic from '../assets/projects/RainTonic.png';
 import '../styles/projects.css'
 
 const projects = [
@@ -47,6 +49,22 @@ const projects = [
     video: "",
     link: "https://proyrcto-fsd-html-css.vercel.app/",
     code: "https://github.com/SantiRV/ProyrctoFSD-HTML-CSS.git",
+  },
+  {
+    name: "Argitalia Ciudadanias",
+    description:"",
+    image: Argitalia,
+    video: "",
+    link: "https://argitaliaciudadanias.vercel.app/",
+    code: "https://github.com/SantiRV/ProyectoClaudio",
+  },
+  {
+    name: "RainTonic Weather App",
+    description:"",
+    image: RainTonic,
+    video: "",
+    link: "https://rain-tonic.vercel.app/",
+    code: "https://github.com/SantiRV/RainTonic",
   }
 ];
 
